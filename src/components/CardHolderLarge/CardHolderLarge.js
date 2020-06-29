@@ -2,9 +2,9 @@ import React from 'react'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import './CardHolderLarge'
 
-let cardSrc = require('../../utils/cardSrc.js');
+
+let cardSrc = require('../../utils/cardSrc')
 
 class CardHolderLarge extends React.Component {
     render() {
@@ -12,12 +12,12 @@ class CardHolderLarge extends React.Component {
             <React.Fragment>
                 <Container fluid>
                     <h6 className='text-center'>FLOP</h6>
-                    <Row lg={5} className="mx-5" >
-                        <Col className='text-center overflow-visible'><img className='card border border-dark' style={{width: '100%', height: 'auto'}} src={cardSrc.c10}/></Col>
-                        <Col className='text-center overflow-visible'><img className='card border border-dark' style={{width: '100%', height: 'auto'}} src={cardSrc.dK}/></Col>
-                        <Col className='text-center overflow-visible'><img className='card border border-dark' style={{width: '100%', height: 'auto'}} src={cardSrc.h8}/></Col>
-                        <Col className='text-center overflow-visible'><img className='card border border-dark' style={{width: '100%', height: 'auto'}} src={cardSrc.s2}/></Col>
-                        <Col className='text-center overflow-visible'><img className='card border border-dark' style={{width: '100%', height: 'auto'}} src={cardSrc.sK}/></Col>
+                    <Row xs={5} s={5} md={5} lg={5} xl={5} className='mx-xl-5 mx-lg-5 mx-md-5 mx-sm-1 mx-xs-0'>
+                        <Col className='text-center px-1'><img className='card border border-dark' src={cardSrc.s3} style={{'width': '100%', 'height': 'auto'}}/></Col>
+                        <Col className='text-center px-1'><img className='card border border-dark' src={cardSrc.s3} style={{'width': '100%', 'height': 'auto'}}/></Col>
+                        <Col className='text-center px-1'><img className='card border border-dark' src={cardSrc.s3} style={{'width': '100%', 'height': 'auto'}}/></Col>
+                        <Col className='text-center px-1'><img className='card border border-dark' src={cardSrc.s3} style={{'width': '100%', 'height': 'auto'}}/></Col>
+                        <Col className='text-center px-1'><img className='card border border-dark' src={cardSrc.s3} style={{'width': '100%', 'height': 'auto'}}/></Col>
                     </Row>
                 </Container>
             </React.Fragment>

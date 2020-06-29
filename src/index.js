@@ -8,6 +8,7 @@ let cardSrc = require('./utils/cardSrc.js')
 ReactDOM.render(
   <React.StrictMode>
     <App />
+    
   </React.StrictMode>,
   document.getElementById('root')
 );
