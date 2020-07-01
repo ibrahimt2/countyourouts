@@ -1,5 +1,6 @@
 import React from 'react';
 import AnswerHolder from './AnswerHolder'
+import PropTypes from 'prop-types'
 
 class AnswerHolderContainer extends React.Component {
     constructor(props) {
@@ -19,8 +20,14 @@ class AnswerHolderContainer extends React.Component {
     handleShow = () => this.setShow(true)
 
     render() {
-        return <AnswerHolder handleShow={this.handleShow} handleClose={this.handleClose} show={this.state.show}/>;
+        return <AnswerHolder handleShow={this.handleShow} handleClose={this.handleClose} show={this.state.show} outs={['Ac', '3c', '4c','Ac', '3c', '4c','Ac', '3c', '4c']} drawName={'Inside Whatever'} answerFeedback={'Suck on my balls'} drawDescription={'Also on my dick while your at it motherfucker'}/>;
     }
 }
+
+AnswerHolder.propTypes = {
+    outs: PropTypes.array,
+    drawName: PropTypes.string,
+    drawDescription: PropTypes.string,
+  };
 
 export default AnswerHolderContainer;

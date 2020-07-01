@@ -1,10 +1,14 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
+import { putCardStringGetImage } from '../../utils/cardSrc'
 
 
 let cardSrc = require('../../utils/cardSrc')
+
+
 
 class CardHolderSmall extends React.Component {
     render() {
@@ -20,8 +24,8 @@ class CardHolderSmall extends React.Component {
                     <Container fluid className="cardHolder pb-1">
                     <h6 className='text-center mb-0'>HOLE CARDS</h6>
                     <Row xs={2} sm={2} md={2} lg={2} xl={2} className=''>
-                        <Col className='px-1'><img className='card border border-dark float-right' src={cardSrc.s3} style={{'width': '100%', 'height': 'auto', 'max-width':'60px'}}/></Col>
-                        <Col className='px-1'><img className='card border border-dark float-left' src={cardSrc.s3} style={{'width': '100%', 'height': 'auto', 'max-width':'60px'}}/></Col>
+                        <Col className='px-1'><img className='card border border-dark float-right' src={putCardStringGetImage[this.props.holeCards[0]]} style={{'width': '100%', 'height': 'auto', 'max-width':'60px'}}/></Col>
+                        <Col className='px-1'><img className='card border border-dark float-left' src={putCardStringGetImage[this.props.holeCards[1]]} style={{'width': '100%', 'height': 'auto', 'max-width':'60px'}}/></Col>
                        
                     </Row>
                     </Container>
@@ -37,6 +41,10 @@ class CardHolderSmall extends React.Component {
             </React.Fragment>
         )
     }
+}
+
+CardHolderSmall.propTypes = {
+    holeCards: PropTypes.oneOfType([PropTypes.string, PropTypes.string]).isRequired,
 }
 
 export default CardHolderSmall;

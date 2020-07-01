@@ -1,8 +1,10 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import './CardHolderLarge.css'
+import { putCardStringGetImage } from '../../utils/cardSrc'
 
 //CD1A1A red
 //FAFF0E yellow
@@ -10,6 +12,8 @@ import './CardHolderLarge.css'
 let cardSrc = require('../../utils/cardSrc')
 
 class CardHolderLarge extends React.Component {
+
+   
     render() {
         return (
             <React.Fragment>
@@ -23,11 +27,11 @@ class CardHolderLarge extends React.Component {
                     <Container fluid className="cardHolder pb-1">
                     <h6 className='text-center mb-0'>FLOP</h6>
                     <Row xs={5} sm={5} md={5} lg={5} xl={5} className=''>
-                        <Col className='px-1'><img className='card border border-dark mx-auto d-block' src={cardSrc.s3} style={{'width': '100%', 'height': 'auto', 'max-width':'75px'}}/></Col>
-                        <Col className='px-1'><img className='card border border-dark mx-auto d-block' src={cardSrc.s3} style={{'width': '100%', 'height': 'auto', 'max-width':'75px'}}/></Col>
-                        <Col className='px-1'><img className='card border border-dark mx-auto d-block' src={cardSrc.s3} style={{'width': '100%', 'height': 'auto', 'max-width':'75px'}}/></Col>
-                        <Col className='px-1'><img className='card border border-dark mx-auto d-block' src={cardSrc.s3} style={{'width': '100%', 'height': 'auto', 'max-width':'75px'}}/></Col>
-                        <Col className='px-1'><img className='card border border-dark mx-auto d-block' src={cardSrc.s3} style={{'width': '100%', 'height': 'auto', 'max-width':'75px'}}/></Col>
+                        <Col className='px-1'><img className='card border border-dark mx-auto d-block' src={putCardStringGetImage[this.props.flopCards[0]]} style={{'width': '100%', 'height': 'auto', 'max-width':'75px'}}/></Col>
+                        <Col className='px-1'><img className='card border border-dark mx-auto d-block' src={putCardStringGetImage[this.props.flopCards[1]]} style={{'width': '100%', 'height': 'auto', 'max-width':'75px'}}/></Col>
+                        <Col className='px-1'><img className='card border border-dark mx-auto d-block' src={putCardStringGetImage[this.props.flopCards[2]]} style={{'width': '100%', 'height': 'auto', 'max-width':'75px'}}/></Col>
+                        <Col className='px-1'><img className='card border border-dark mx-auto d-block' src={putCardStringGetImage[this.props.flopCards[3]]} style={{'width': '100%', 'height': 'auto', 'max-width':'75px'}}/></Col>
+                        <Col className='px-1'><img className='card border border-dark mx-auto d-block' src={putCardStringGetImage[this.props.flopCards[4]]} style={{'width': '100%', 'height': 'auto', 'max-width':'75px'}}/></Col>
                     </Row>
                     </Container>
                     </Col>
@@ -42,6 +46,10 @@ class CardHolderLarge extends React.Component {
             </React.Fragment>
         )
     }
+}
+
+CardHolderLarge.propTypes = {
+    flopCards: PropTypes.oneOfType([PropTypes.string, PropTypes.string, PropTypes.string, PropTypes.string, PropTypes.string]).isRequired,
 }
 
 export default CardHolderLarge;

@@ -3,17 +3,28 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
+import PropTypes from "prop-types";
 import "./AnswerHolder.css";
 import Modal from "react-bootstrap/Modal";
+import { putCardStringGetImage } from "../../utils/cardSrc";
 
 let cardSrc = require("../../utils/cardSrc");
 
 class AnswerHolder extends React.Component {
   render() {
-    //     const [show, setShow] = useState(false);
 
-    //   const handleClose = () => setShow(false);
-    //   const handleShow = () => setShow(true);
+    let outsItems = this.props.outs.map((outItem) => (
+      <img
+        className="card border border-dark mx-auto inline-block"
+        src={putCardStringGetImage[outItem]}
+        style={{
+          width: "100%",
+          height: "auto",
+          "max-width": "50px",
+        }}
+      />
+    ));
+
     return (
       <React.Fragment>
         <Container fluid className="mx-0 px-0 mt-1">
@@ -23,112 +34,30 @@ class AnswerHolder extends React.Component {
             className="modal-dialog text-center"
           >
             <Modal.Body>
-              Woohoo, you're reading this text in a modal!
-              <div id="outsWrapper">
-                <div id="outsInnerWrapper">
-                  <img
-                    className="card border border-dark mx-auto inline-block"
-                    src={cardSrc.s3}
-                    style={{
-                      width: "100%",
-                      height: "auto",
-                      "max-width": "50px",
-                    }}
-                  />
-                  <img
-                    className="card border border-dark mx-auto inline-block"
-                    src={cardSrc.s3}
-                    style={{
-                      width: "100%",
-                      height: "auto",
-                      "max-width": "50px",
-                    }}
-                  />
-                  <img
-                    className="card border border-dark mx-auto inline-block"
-                    src={cardSrc.s3}
-                    style={{
-                      width: "100%",
-                      height: "auto",
-                      "max-width": "50px",
-                    }}
-                  />
-                  <img
-                    className="card border border-dark mx-auto inline-block"
-                    src={cardSrc.s3}
-                    style={{
-                      width: "100%",
-                      height: "auto",
-                      "max-width": "50px",
-                    }}
-                  />
-                  <img
-                    className="card border border-dark mx-auto inline-block"
-                    src={cardSrc.s3}
-                    style={{
-                      width: "100%",
-                      height: "auto",
-                      "max-width": "50px",
-                    }}
-                  />
-                  <img
-                    className="card border border-dark mx-auto inline-block"
-                    src={cardSrc.s3}
-                    style={{
-                      width: "100%",
-                      height: "auto",
-                      "max-width": "50px",
-                    }}
-                  />
-                  <img
-                    className="card border border-dark mx-auto inline-block"
-                    src={cardSrc.s3}
-                    style={{
-                      width: "100%",
-                      height: "auto",
-                      "max-width": "50px",
-                    }}
-                  />
-                  <img
-                    className="card border border-dark mx-auto inline-block"
-                    src={cardSrc.s3}
-                    style={{
-                      width: "100%",
-                      height: "auto",
-                      "max-width": "50px",
-                    }}
-                  />
-                  <img
-                    className="card border border-dark mx-auto inline-block"
-                    src={cardSrc.s3}
-                    style={{
-                      width: "100%",
-                      height: "auto",
-                      "max-width": "50px",
-                    }}
-                  />
-                  
+              <Container>
+                <h6 className="text-left">{this.props.answerFeedback}</h6>
+                <h6 className="text-left">Draw Name: {this.props.drawName}</h6>
+                <p className="text-left">{this.props.drawDescription}</p>
+                <h6 className="text-center align-middle">
+                  {this.props.outs.length} OUTS
+                </h6>
+                {/* <p>Wrong!</p>
+              <p><a>Scenario: 'Two Pair to Fullhouse'</a></p>
+              <p>Description: </p> */}
+                <div id="outsWrapper">
+                  <div id="outsInnerWrapper">{outsItems}</div>
                 </div>
-              </div>
+              </Container>
             </Modal.Body>
-            {/* <Modal.Footer>
-              
-
+            <Modal.Footer>
               <Button
-                      variant="secondary"
-                      size="sm"
-                      onClick={this.props.handleClose}
-                    >
-                      Close
-                    </Button>
-                    <Button
-                      variant="primary"
-                      size="sm"
-                      onClick={this.props.handleClose}
-                    >
-                      Save Changes
-                    </Button>
-            </Modal.Footer> */}
+                variant="primary"
+                size="sm"
+                onClick={this.props.handleClose}
+              >
+                Next Hand
+              </Button>
+            </Modal.Footer>
           </Modal>
           <Row>
             <Col xs={0} sm={2} md={3} lg={4} xl={4} className=""></Col>
@@ -189,27 +118,16 @@ class AnswerHolder extends React.Component {
           </Row>
         </Container>
 
-        {/* <Button variant="primary" onClick={handleShow}>
-          Launch demo modal
-        </Button>
-
-        <Modal show={show} onHide={handleClose}>
-          <Modal.Header closeButton>
-            <Modal.Title>Modal heading</Modal.Title>
-          </Modal.Header>
-          <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
-          <Modal.Footer>
-            <Button variant="secondary" onClick={handleClose}>
-              Close
-            </Button>
-            <Button variant="primary" onClick={handleClose}>
-              Save Changes
-            </Button>
-          </Modal.Footer>
-        </Modal> */}
       </React.Fragment>
     );
   }
 }
+
+AnswerHolder.propTypes = {
+  answerFeedback: PropTypes.string,
+  outs: PropTypes.array,
+  drawName: PropTypes.string,
+  drawDescription: PropTypes.string,
+};
 
 export default AnswerHolder;
