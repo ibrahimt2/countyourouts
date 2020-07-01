@@ -49,11 +49,12 @@ class AnswerHolder extends React.Component {
                 </div>
               </Container>
             </Modal.Body>
-            <Modal.Footer>
+            <Modal.Footer className="p-0 m-0">
               <Button
                 variant="primary"
                 size="sm"
                 onClick={this.props.handleClose}
+                className="m-1"
               >
                 Next Hand
               </Button>
