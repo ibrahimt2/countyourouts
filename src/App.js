@@ -8,6 +8,7 @@ import CardHolderSmall from './components/CardHolderSmall/CardHolderSmall'
 import { BrowserRouter as Router } from 'react-router-dom'
 import AnswerHolderContainer from './components/AnswerHolder/AnswerHolderContainer';
 import Footer from './components/Footer/Footer'
+import OutCounterWidgetContainer from './components/OutCounterWidget/OutCounterWidgetContainer'
 import OutCounterWidget from './components/OutCounterWidget/OutCounterWidget'
 
 
@@ -17,7 +18,7 @@ function App() {
       <Router>
       <NavigationBar/>
       <Container>
-      <OutCounterWidget/>
+      <OutCounterWidgetContainer/>
       </Container>
       <Footer></Footer>
       </Router>

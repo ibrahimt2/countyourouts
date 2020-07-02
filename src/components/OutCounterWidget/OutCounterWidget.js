@@ -2,17 +2,30 @@ import React from "react";
 import AnswerHolderContainer from "../AnswerHolder/AnswerHolderContainer";
 import CardHolderLarge from "../CardHolderLarge/CardHolderLarge";
 import CardHolderSmall from "../CardHolderSmall/CardHolderSmall";
+import PropTypes from 'prop-types'
 
 class OutCounterWidget extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <CardHolderLarge flopCards={["3d", "4c", "Ad", "redBack", "redBack"]} />
-        <CardHolderSmall holeCards={["As", "Qd"]} />
-        <AnswerHolderContainer />
+        <CardHolderLarge flopCards={[this.props.flopCards[0], this.props.flopCards[1], this.props.flopCards[2], "redBack", "redBack"]} />
+        <CardHolderSmall holeCards={[this.props.holeCards[0], this.props.holeCards[1]]} />
+        <AnswerHolderContainer outsNumber={this.props.outsNumber} drawName={this.props.drawName}/>
       </React.Fragment>
     );
   }
 }
+
+OutCounterWidget.propTypes = {
+  holeCards: PropTypes.oneOfType([PropTypes.string, PropTypes.string, PropTypes.string, PropTypes.string, PropTypes.string]).isRequired,
+  flopCards: PropTypes.oneOfType([PropTypes.string, PropTypes.string]).isRequired,
+  answerFeedback: PropTypes.string,
+  outs: PropTypes.array,
+  drawName: PropTypes.string,
+  drawDescription: PropTypes.string,
+  outsNumber: PropTypes.number
+}
+
+
 
 export default OutCounterWidget;

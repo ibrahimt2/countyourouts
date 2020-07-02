@@ -35,11 +35,11 @@ class AnswerHolder extends React.Component {
           >
             <Modal.Body>
               <Container>
-                <h6 className="text-left">{this.props.answerFeedback}</h6>
+                {/* <h6 className="text-left">{this.props.answerFeedback}</h6> */}
                 <h6 className="text-left">Draw Name: {this.props.drawName}</h6>
-                <p className="text-left">{this.props.drawDescription}</p>
+                {/* <p className="text-left">{this.props.drawDescription}</p> */}
                 <h6 className="text-center align-middle">
-                  {this.props.outs.length} OUTS
+                  {this.props.outsNumber} OUTS
                 </h6>
                 {/* <p>Wrong!</p>
               <p><a>Scenario: 'Two Pair to Fullhouse'</a></p>

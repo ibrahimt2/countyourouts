@@ -20,7 +20,7 @@ class AnswerHolderContainer extends React.Component {
     handleShow = () => this.setShow(true)
 
     render() {
-        return <AnswerHolder handleShow={this.handleShow} handleClose={this.handleClose} show={this.state.show} outs={['Ac', '3c', '4c','Ac', '3c', '4c','Ac', '3c', '4c']} drawName={'Inside Whatever'} answerFeedback={'Suck on my balls'} drawDescription={'Also on my dick while your at it motherfucker'}/>;
+        return <AnswerHolder handleShow={this.handleShow} handleClose={this.handleClose} show={this.state.show} outs={['Ac', '3c', '4c','Ac', '3c', '4c','Ac', '3c', '4c']} drawName={this.props.drawName} answerFeedback={'Suck on my balls'} drawDescription={'Also on my dick while your at it motherfucker'} outsNumber={this.props.outsNumber}/>;
     }
 }
 
@@ -28,6 +28,7 @@ AnswerHolder.propTypes = {
     outs: PropTypes.array,
     drawName: PropTypes.string,
     drawDescription: PropTypes.string,
+    outNumber: PropTypes.number
   };
 
 export default AnswerHolderContainer;
