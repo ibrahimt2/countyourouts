@@ -10,7 +10,7 @@ class OutCounterWidget extends React.Component {
       <React.Fragment>
         <CardHolderLarge flopCards={[this.props.flopCards[0], this.props.flopCards[1], this.props.flopCards[2], "redBack", "redBack"]} />
         <CardHolderSmall holeCards={[this.props.holeCards[0], this.props.holeCards[1]]} />
-        <AnswerHolderContainer outsNumber={this.props.outsNumber} drawName={this.props.drawName}/>
+        <AnswerHolderContainer generateNewFlopScenario={this.props.generateNewFlopScenario} outsNumber={this.props.outsNumber} drawName={this.props.drawName}/>
       </React.Fragment>
     );
   }
@@ -23,7 +23,8 @@ OutCounterWidget.propTypes = {
   outs: PropTypes.array,
   drawName: PropTypes.string,
   drawDescription: PropTypes.string,
-  outsNumber: PropTypes.number
+  outsNumber: PropTypes.number,
+  generateNewFlopScenario: PropTypes.func
 }
 
 
