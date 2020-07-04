@@ -44,23 +44,18 @@ class AnswerHolderContainer extends React.Component {
       21,
     ]);
     possibleAnswerArr.splice(
-      possibleAnswerArr.indexOf(this.props.outNumber),
+      possibleAnswerArr.indexOf(this.props.outsNumber),
       1
     );
+    
     answerArr.push(this.props.outsNumber);
-    answerArr.push(
-      possibleAnswerArr[Math.floor(Math.random() * possibleAnswerArr.length)]
-    );
-    answerArr.push(
-      possibleAnswerArr[Math.floor(Math.random() * possibleAnswerArr.length)]
-    );
-    answerArr.push(
-      possibleAnswerArr[Math.floor(Math.random() * possibleAnswerArr.length)]
-    );
-    answerArr.push(
-      possibleAnswerArr[Math.floor(Math.random() * possibleAnswerArr.length)]
-    );
-
+    answerArr.push(possibleAnswerArr.splice(Math.floor(Math.random() * possibleAnswerArr.length), 1));
+    answerArr.push(possibleAnswerArr.splice(Math.floor(Math.random() * possibleAnswerArr.length), 1));
+    answerArr.push(possibleAnswerArr.splice(Math.floor(Math.random() * possibleAnswerArr.length), 1));
+    answerArr.push(possibleAnswerArr.splice(Math.floor(Math.random() * possibleAnswerArr.length), 1));
+      //bundle this up with generateNewFlopScenario and pass it down why dont you
+    console.log(this.props.outsNumber)
+    console.log(possibleAnswerArr)
     shuffle(answerArr);
     return answerArr;
   };
@@ -100,7 +95,7 @@ AnswerHolder.propTypes = {
   outs: PropTypes.array,
   drawName: PropTypes.string,
   drawDescription: PropTypes.string,
-  outNumber: PropTypes.number,
+  outsNumber: PropTypes.number,
 };
 
 export default AnswerHolderContainer;
