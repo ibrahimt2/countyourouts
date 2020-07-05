@@ -12,7 +12,7 @@ let cardSrc = require("../../utils/cardSrc");
 
 class AnswerHolder extends React.Component {
   render() {
-    let outsItems = this.props.outs.map((outItem) => (
+    let outsItems = this.props.outCards.map((outItem) => (
       <img
         className="card border border-dark mx-auto inline-block"
         src={putCardStringGetImage[outItem]}
@@ -24,7 +24,7 @@ class AnswerHolder extends React.Component {
       />
     ));
 
-    let answerFeedback
+   
 
     return (
       <React.Fragment>
@@ -53,7 +53,8 @@ class AnswerHolder extends React.Component {
                 size="sm"
                 onClick={() => {
                   this.props.handleClose();
-                  this.props.generateNewFlopScenario();
+                  this.props.setNewFlopScenario();
+                  this.props.setAnswerOptions();
                 }}
                 className="m-1"
               >
@@ -73,7 +74,7 @@ class AnswerHolder extends React.Component {
                       block
                       onClick={this.props.handleShow}
                     >
-                      {this.props.answerArr[0]}
+                      {this.props.answerOptions[0]}
                     </Button>{" "}
                   </Col>
                   <Col className="px-1">
@@ -82,7 +83,7 @@ class AnswerHolder extends React.Component {
                       block
                       onClick={this.props.handleShow}
                     >
-                      {this.props.answerArr[1]}
+                      {this.props.answerOptions[1]}
                     </Button>{" "}
                   </Col>
                   <Col className="px-1">
@@ -91,7 +92,7 @@ class AnswerHolder extends React.Component {
                       block
                       onClick={this.props.handleShow}
                     >
-                      {this.props.answerArr[2]}
+                      {this.props.answerOptions[2]}
                     </Button>{" "}
                   </Col>
                   <Col className="px-1">
@@ -100,7 +101,7 @@ class AnswerHolder extends React.Component {
                       block
                       onClick={this.props.handleShow}
                     >
-                      {this.props.answerArr[3]}
+                      {this.props.answerOptions[3]}
                     </Button>{" "}
                   </Col>
                   <Col className="px-1">
@@ -109,7 +110,7 @@ class AnswerHolder extends React.Component {
                       block
                       onClick={this.props.handleShow}
                     >
-                      {this.props.answerArr[4]}
+                      {this.props.answerOptions[4]}
                     </Button>{" "}
                   </Col>
                 </Row>
