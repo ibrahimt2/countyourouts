@@ -11,6 +11,7 @@ import { putCardStringGetImage } from "../../utils/cardSrc";
 let cardSrc = require("../../utils/cardSrc");
 
 class AnswerHolder extends React.Component {
+
   render() {
     let outsItems = this.props.outCards.map((outItem) => (
       <img
@@ -24,8 +25,6 @@ class AnswerHolder extends React.Component {
       />
     ));
 
-   
-
     return (
       <React.Fragment>
         <Container fluid className="mx-0 px-0 mt-1">
@@ -36,7 +35,7 @@ class AnswerHolder extends React.Component {
           >
             <Modal.Body>
               <Container>
-                <h6 className="text-left">Your answer is: {this.props.answerCorrectness}</h6>
+                <h6 className="text-left">Your answer is: {JSON.stringify(this.props.answerCorrectness)}</h6>
                 <h6 className="text-left">Draw Name: {this.props.drawName}</h6>
                 {/* <p className="text-left">{this.props.drawDescription}</p> */}
                 <h6 className="text-center align-middle">
@@ -72,7 +71,10 @@ class AnswerHolder extends React.Component {
                     <Button
                       variant="dark"
                       block
-                      onClick={this.props.handleShow}
+                      onClick={(e) => {
+                        this.props.handleShow(e);
+                      }}
+                      value={this.props.answerOptions[0]}
                     >
                       {this.props.answerOptions[0]}
                     </Button>{" "}
@@ -81,7 +83,10 @@ class AnswerHolder extends React.Component {
                     <Button
                       variant="dark"
                       block
-                      onClick={this.props.handleShow}
+                      onClick={(e) => {
+                        this.props.handleShow(e);
+                      }}
+                      value={this.props.answerOptions[1]}
                     >
                       {this.props.answerOptions[1]}
                     </Button>{" "}
@@ -90,7 +95,10 @@ class AnswerHolder extends React.Component {
                     <Button
                       variant="dark"
                       block
-                      onClick={this.props.handleShow}
+                      onClick={(e) => {
+                        this.props.handleShow(e);
+                      }}
+                      value={this.props.answerOptions[2]}
                     >
                       {this.props.answerOptions[2]}
                     </Button>{" "}
@@ -99,7 +107,10 @@ class AnswerHolder extends React.Component {
                     <Button
                       variant="dark"
                       block
-                      onClick={this.props.handleShow}
+                      onClick={(e) => {
+                        this.props.handleShow(e);
+                      }}
+                      value={this.props.answerOptions[3]}
                     >
                       {this.props.answerOptions[3]}
                     </Button>{" "}
@@ -108,7 +119,10 @@ class AnswerHolder extends React.Component {
                     <Button
                       variant="dark"
                       block
-                      onClick={this.props.handleShow}
+                      onClick={(e) => {
+                        this.props.handleShow(e);
+                      }}
+                      value={this.props.answerOptions[4]}
                     >
                       {this.props.answerOptions[4]}
                     </Button>{" "}

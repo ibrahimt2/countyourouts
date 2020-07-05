@@ -18,7 +18,21 @@ class AnswerHolderContainer extends React.Component {
   }
 
   handleClose = () => this.setShow(false);
-  handleShow = () => this.setShow(true);
+  handleShow = (event) => {
+    this.setShow(true)
+    
+    if(event.target.value == this.props.outsNumber) {
+      console.log(true)
+      this.props.setAnswerCorrectness(true);
+      console.log(event.target.value)
+      console.log(this.props.answerCorrectness + "ANSWER CORRECTNESS")
+    } else {
+      console.log(false)
+      this.props.setAnswerCorrectness(false);
+      console.log(event.target.value)
+      console.log(this.props.answerCorrectness + "ANSWER CORRECTNESS")
+    }
+  };
 
   render() {
     return (
