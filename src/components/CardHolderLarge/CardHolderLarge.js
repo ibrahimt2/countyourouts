@@ -25,7 +25,7 @@ class CardHolderLarge extends React.Component {
                     </Col>
                     <Col xs={12} sm={8} md={6} lg={6} xl={6}>
                     <Container fluid className="cardHolder pb-1">
-                    <h6 className='text-center mb-0'>FLOP</h6>
+                    <h6 className='text-center mb-0 main-font-family' >FLOP</h6>
                     <Row xs={5} sm={5} md={5} lg={5} xl={5} className=''>
                         <Col className='px-1'><img className='card border border-dark mx-auto d-block' src={putCardStringGetImage[this.props.flopCards[0]]} style={{'width': '100%', 'height': 'auto', 'max-width':'75px'}}/></Col>
                         <Col className='px-1'><img className='card border border-dark mx-auto d-block' src={putCardStringGetImage[this.props.flopCards[1]]} style={{'width': '100%', 'height': 'auto', 'max-width':'75px'}}/></Col>

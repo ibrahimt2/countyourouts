@@ -17,6 +17,14 @@ class AnswerHolderContainer extends React.Component {
     });
   }
 
+  displayAnswerCorrectnessIcon = (answerCorrectness) => {
+    if(answerCorrectness) {
+      return <img className='text-center' src={require('../../assets/icons/010-check.svg')} style={{'width': '100%', 'height': 'auto', 'max-width':'40px'}}/>
+    } else {
+      return <img className='text-center' src={require('../../assets/icons/076-remove.svg')} style={{'width': '100%', 'height': 'auto', 'max-width':'40px'}}/>
+    }
+  }
+
   handleClose = () => this.setShow(false);
   handleShow = (event) => {
     this.setShow(true)
@@ -37,6 +45,7 @@ class AnswerHolderContainer extends React.Component {
   render() {
     return (
       <AnswerHolder
+        displayAnswerCorrectnessIcon={this.displayAnswerCorrectnessIcon}
         setAnswerOptions={this.props.setAnswerOptions}
         setAnswerCorrectness={this.props.setAnswerCorrectness}
         setNewFlopScenario={this.props.setNewFlopScenario}

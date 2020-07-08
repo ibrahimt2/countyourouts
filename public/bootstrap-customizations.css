@@ -1,0 +1,44 @@
+.btn,
+.form-control {
+  border-radius: 0;
+}
+
+
+
+.btn-primary {
+    color: #fff;
+    background-color: #E58E15;
+    border-color: #E58E15;
+  }
+  
+  .btn-primary:hover {
+    color: #fff;
+    background-color: #CD1A1A;
+    border-color: #CD1A1A;
+  }
+  
+  .btn-primary:focus, .btn-primary.focus {
+    color: #fff;
+    background-color: #E58E15;
+    border-color: #E58E15;
+    box-shadow: 0 0 0 0.2rem rgba(229, 132, 21, 0.5)
+  }
+  
+  .btn-primary.disabled, .btn-primary:disabled {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+  }
+  
+  .btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active,
+  .show > .btn-primary.dropdown-toggle {
+    color: #fff;
+    background-color: #E58E15;
+    border-color: #E58E15;
+  }
+  
+  .btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus,
+  .show > .btn-primary.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0.2rem rgba(229, 132, 21, 0.5)
+  }
+

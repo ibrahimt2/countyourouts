@@ -7,11 +7,12 @@ import PropTypes from "prop-types";
 import "./AnswerHolder.css";
 import Modal from "react-bootstrap/Modal";
 import { putCardStringGetImage } from "../../utils/cardSrc";
+import QuestionTooltip from "./QuestionTooltip";
+import AnswerOptions from "./AnswerOptions";
 
 let cardSrc = require("../../utils/cardSrc");
 
 class AnswerHolder extends React.Component {
-
   render() {
     let outsItems = this.props.outCards.map((outItem) => (
       <img
@@ -35,99 +36,51 @@ class AnswerHolder extends React.Component {
           >
             <Modal.Body>
               <Container>
-                <h6 className="text-left">Your answer is: {JSON.stringify(this.props.answerCorrectness)}</h6>
-                <h6 className="text-left">Draw Name: {this.props.drawName}</h6>
-                {/* <p className="text-left">{this.props.drawDescription}</p> */}
-                <h6 className="text-center align-middle">
-                  {this.props.outsNumber} OUTS
-                </h6>
-                <div id="outsWrapper">
-                  <div id="outsInnerWrapper">{outsItems}</div>
-                </div>
+                <Row className="justify-content-center">
+                  {this.props.displayAnswerCorrectnessIcon(
+                    this.props.answerCorrectness
+                  )}
+                </Row>
+                <Row className="justify-content-center mt-3">
+                  <h6 className="text-center main-font-family">{this.props.drawName}</h6>
+                </Row>
+                <Row className="justify-content-center">
+                  <h6 className="text-center align-middle main-font-family">
+                    {this.props.outCards.length} OUTS
+                  </h6>
+                </Row>
+                <Row className="justify-content-center">
+                  <div id="outsWrapper">
+                    <div id="outsInnerWrapper">{outsItems}</div>
+                  </div>
+                </Row>
+                <Row className="float-right">
+                  <Button
+                    variant="primary"
+                    size="sm"
+                    onClick={() => {
+                      this.props.handleClose();
+                      this.props.setNewFlopScenario();
+                      this.props.setAnswerOptions();
+                    }}
+                    className="mx-0 my-1 main-font-family"
+                  >
+                    Next Hand
+                  </Button>
+                </Row>
               </Container>
             </Modal.Body>
-            <Modal.Footer className="p-0 m-0">
-              <Button
-                variant="primary"
-                size="sm"
-                onClick={() => {
-                  this.props.handleClose();
-                  this.props.setNewFlopScenario();
-                  this.props.setAnswerOptions();
-                }}
-                className="m-1"
-              >
-                Next Hand
-              </Button>
-            </Modal.Footer>
+            <Modal.Footer className="p-0 m-0"></Modal.Footer>
           </Modal>
           <Row>
             <Col xs={0} sm={2} md={3} lg={4} xl={4} className=""></Col>
             <Col xs={12} sm={8} md={6} lg={4} xl={4}>
               <Container fluid className="cardHolder pb-1">
-                <h6 className="text-center mb-1">How many outs do you have?</h6>
-                <Row xs={5} sm={5} md={5} lg={5} xl={5} className="">
-                  <Col className="px-1">
-                    <Button
-                      variant="dark"
-                      block
-                      onClick={(e) => {
-                        this.props.handleShow(e);
-                      }}
-                      value={this.props.answerOptions[0]}
-                    >
-                      {this.props.answerOptions[0]}
-                    </Button>{" "}
-                  </Col>
-                  <Col className="px-1">
-                    <Button
-                      variant="dark"
-                      block
-                      onClick={(e) => {
-                        this.props.handleShow(e);
-                      }}
-                      value={this.props.answerOptions[1]}
-                    >
-                      {this.props.answerOptions[1]}
-                    </Button>{" "}
-                  </Col>
-                  <Col className="px-1">
-                    <Button
-                      variant="dark"
-                      block
-                      onClick={(e) => {
-                        this.props.handleShow(e);
-                      }}
-                      value={this.props.answerOptions[2]}
-                    >
-                      {this.props.answerOptions[2]}
-                    </Button>{" "}
-                  </Col>
-                  <Col className="px-1">
-                    <Button
-                      variant="dark"
-                      block
-                      onClick={(e) => {
-                        this.props.handleShow(e);
-                      }}
-                      value={this.props.answerOptions[3]}
-                    >
-                      {this.props.answerOptions[3]}
-                    </Button>{" "}
-                  </Col>
-                  <Col className="px-1">
-                    <Button
-                      variant="dark"
-                      block
-                      onClick={(e) => {
-                        this.props.handleShow(e);
-                      }}
-                      value={this.props.answerOptions[4]}
-                    >
-                      {this.props.answerOptions[4]}
-                    </Button>{" "}
-                  </Col>
-                </Row>
+                <QuestionTooltip />
+                <AnswerOptions
+                  handleShow={this.props.handleShow}
+                  answerOptions={this.props.answerOptions}
+                />
               </Container>
             </Col>
 

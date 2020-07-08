@@ -30,7 +30,7 @@ class OutCounterWidgetContainer extends React.Component {
       flopInformation: newFlopScenario,
     });
 
-    let newAnswerOptions = this.generateAnswerOptions(newFlopScenario.outs);
+    let newAnswerOptions = this.generateAnswerOptions(newFlopScenario.outCards.length);
     this.setState({
       answerOptions: newAnswerOptions
     });

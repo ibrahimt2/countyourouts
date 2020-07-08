@@ -22,7 +22,7 @@ class CardHolderSmall extends React.Component {
                     </Col>
                     <Col xs={12} sm={8} md={6} lg={6} xl={6}>
                     <Container fluid className="cardHolder pb-1">
-                    <h6 className='text-center mb-0'>HOLE CARDS</h6>
+                    <h6 className='text-center mb-0 '>HOLE CARDS</h6>
                     <Row xs={2} sm={2} md={2} lg={2} xl={2} className=''>
                         <Col className='px-1'><img className='card border border-dark float-right' src={putCardStringGetImage[this.props.holeCards[0]]} style={{'width': '100%', 'height': 'auto', 'max-width':'60px'}}/></Col>
                         <Col className='px-1'><img className='card border border-dark float-left' src={putCardStringGetImage[this.props.holeCards[1]]} style={{'width': '100%', 'height': 'auto', 'max-width':'60px'}}/></Col>

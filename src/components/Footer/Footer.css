@@ -1,0 +1,12 @@
+.customDivider {
+    min-width: 0.5rem;
+}
+
+.primary-red {
+    background-color: #CD1A1A;
+}
+
+.main-footer {
+    
+    bottom: 0;
+}

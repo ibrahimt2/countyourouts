@@ -20,8 +20,9 @@ function App() {
       <Container>
       <OutCounterWidgetContainer/>
       </Container>
-      <Footer></Footer>
+      
       </Router>
+      {/* <Footer></Footer> */}
     </React.Fragment>
   );
 }
