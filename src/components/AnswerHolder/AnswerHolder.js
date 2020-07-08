@@ -76,7 +76,7 @@ class AnswerHolder extends React.Component {
             <Col xs={0} sm={2} md={3} lg={4} xl={4} className=""></Col>
             <Col xs={12} sm={8} md={6} lg={4} xl={4}>
               <Container fluid className="cardHolder pb-1">
-                <QuestionTooltip />
+                <QuestionTooltip/>
                 <AnswerOptions
                   handleShow={this.props.handleShow}
                   answerOptions={this.props.answerOptions}
