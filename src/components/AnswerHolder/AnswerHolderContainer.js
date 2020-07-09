@@ -7,7 +7,6 @@ class AnswerHolderContainer extends React.Component {
   constructor(props) {
     super(props);
     this.state = { show: false};
-
     this.setShow = this.setShow.bind(this);
   }
 
@@ -29,7 +28,7 @@ class AnswerHolderContainer extends React.Component {
   handleShow = (event) => {
     this.setShow(true)
     
-    if(event.target.value == this.props.outsNumber) {
+    if(event.target.value == this.props.outCards.length) {
       console.log(true)
       this.props.setAnswerCorrectness(true);
       console.log(event.target.value)
