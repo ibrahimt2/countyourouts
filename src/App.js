@@ -14,7 +14,7 @@ function App() {
     <React.Fragment>
       <Router>
         <NavigationBar />
-        {/* <Container> */}
+        <Container>
         <Row>
           <Col xs={0} sm={2} md={3} lg={3} xl={3}></Col>
           <Col className="m-1">
@@ -24,7 +24,7 @@ function App() {
           </Col>
           <Col xs={0} sm={2} md={3} lg={3} xl={3}></Col>
         </Row>
-        {/* </Container> */}
+        </Container>
 
         {/* <SettingsDropdownContainer/> */}
       </Router>
