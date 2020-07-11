@@ -3,11 +3,27 @@ import AnswerHolderContainer from "../AnswerHolder/AnswerHolderContainer";
 import CardHolderLarge from "../CardHolderLarge/CardHolderLarge";
 import CardHolderSmall from "../CardHolderSmall/CardHolderSmall";
 import PropTypes from "prop-types";
+import SettingsDropdownContainer from "../SettingsDropdown/SettingsDropdownContainer";
 
 class OutCounterWidget extends React.Component {
   render() {
     return (
       <React.Fragment>
+        <SettingsDropdownContainer
+        insideStraightFreq={this.props.insideStraightFreq}
+        openStraightFreq={this.props.openStraightFreq}
+        flushDrawFreq={this.props.flushDrawFreq}
+        noHitsFreq={this.props.noHitsFreq}
+        tripsToFullhouseOrQuadsFreq={this.props.tripsToFullhouseOrQuadsFreq}
+        onePairToTwoPairFreq={this.props.onePairToTwoPairFreq}
+        twoPairToFullhouseFreq={this.props.twoPairToFullhouseFreq}
+        setInsideStraightFreq={this.props.setInsideStraightFreq}
+        setOpenStraightFreq={this.props.setOpenStraightFreq}
+        setFlushDrawFreq={this.props.setFlushDrawFreq}
+        setNoHitsFreq={this.props.setNoHitsFreq}
+        setTripsToFullhouseOrQuadsFreq={this.props.setTripsToFullhouseOrQuadsFreq}
+        setOnePairToTwoPairFreq={this.props.setOnePairToTwoPairFreq}
+        setTwoPairToFullhouseFreq={this.props.setTwoPairToFullhouseFreq}/>
         <CardHolderLarge
           flopCards={[
             this.props.flopCards[0],

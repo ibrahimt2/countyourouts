@@ -61,7 +61,6 @@ class AnswerHolder extends React.Component {
                     onClick={() => {
                       this.props.handleClose();
                       this.props.setNewFlopScenario();
-                      this.props.setAnswerOptions();
                     }}
                     className="mx-0 my-1 main-font-family"
                   >

@@ -1,49 +1,123 @@
 import React from "react";
 import OutCounterWidget from "./OutCounterWidget";
 import { generateFlopScenario } from "poker-draw-generator/drawGenerator";
-import {shuffle } from '../../utils/shuffle'
+import { shuffle } from "../../utils/shuffle";
+import generateInsideStraight from "poker-draw-generator/generateInsideStraight";
 
 class OutCounterWidgetContainer extends React.Component {
   constructor(props) {
     super(props);
 
-    let initialFlop = generateFlopScenario();
-    console.log(initialFlop + 'INITIAL FLOP');
-    let initialAnswerOptions = this.generateAnswerOptions(initialFlop.outs);
-    console.log(initialAnswerOptions+ 'ANSWER OPTIONS');
-
+    let initialFreq = 5;
+    let initialFlop = generateFlopScenario(
+      initialFreq,
+      initialFreq,
+      initialFreq,
+      initialFreq,
+      initialFreq,
+      initialFreq,
+      initialFreq
+    );
+    console.log(initialFlop + "INITIAL FLOP");
+    let initialAnswerOptions = this.generateAnswerOptions(
+      initialFlop.outCards.length
+    );
+    console.log(initialAnswerOptions + "ANSWER OPTIONS");
 
     this.state = {
       flopInformation: initialFlop,
       answerOptions: initialAnswerOptions,
-      answerCorrectness: false
+      answerCorrectness: false,
+      insideStraightFreq: initialFreq,
+      openStraightFreq: initialFreq,
+      flushDrawFreq: initialFreq,
+      noHitsFreq: initialFreq,
+      tripsToFullhouseOrQuadsFreq: initialFreq,
+      onePairToTwoPairFreq: initialFreq,
+      twoPairToFullhouseFreq: initialFreq,
     };
 
     this.setNewFlopScenario = this.setNewFlopScenario.bind(this);
-    this.setAnswerOptions = this.setAnswerOptions.bind(this);
-    this.setAnswerCorrectness = this.setAnswerCorrectness.bind(this)
+    this.setAnswerCorrectness = this.setAnswerCorrectness.bind(this);
+    this.setInsideStraightFreq = this.setInsideStraightFreq.bind(this);
+    this.setOpenStraightFreq = this.setOpenStraightFreq.bind(this);
+    this.setFlushDrawFreq = this.setFlushDrawFreq.bind(this);
+    this.setNoHitsFreq = this.setNoHitsFreq.bind(this);
+    this.setTripsToFullhouseOrQuadsFreq = this.setTripsToFullhouseOrQuadsFreq.bind(
+      this
+    );
+    this.setOnePairToTwoPairFreq = this.setOnePairToTwoPairFreq.bind(this);
+    this.setTwoPairToFullhouseFreq = this.setTwoPairToFullhouseFreq.bind(this);
+  }
+
+  setInsideStraightFreq(updateVal) {
+    this.setState({
+      insideStraightFreq: updateVal,
+    });
+  }
+
+  setOpenStraightFreq(updateVal) {
+    this.setState({
+      openStraightFreq: updateVal,
+    });
+  }
+
+  setFlushDrawFreq(updateVal) {
+    this.setState({
+      FlushDrawFreq: updateVal,
+    });
+  }
+
+  setNoHitsFreq(updateVal) {
+    this.setState({
+      noHitsFreq: updateVal,
+    });
+  }
+
+  setTripsToFullhouseOrQuadsFreq(updateVal) {
+    this.setState({
+      tripsToFullhouseOrQuadsFreq: updateVal,
+    });
+  }
+
+  setOnePairToTwoPairFreq(updateVal) {
+    this.setState({
+      onePairToTwoPairFreq: updateVal,
+    });
+  }
+
+  setTwoPairToFullhouseFreq(updateVal) {
+    this.setState({
+      twoPairToFullhouseFreq: updateVal,
+    });
   }
 
   setNewFlopScenario() {
-    let newFlopScenario = generateFlopScenario(); 
+    let newFlopScenario = generateFlopScenario(
+      this.state.insideStraightFreq,
+      this.state.openStraightFreq,
+      this.state.flushDrawFreq,
+      this.state.noHitsFreq,
+      this.state.tripsToFullhouseOrQuadsFreq,
+      this.state.twoPairToFullhouseFreq,
+      this.state.onePairToTwoPairOrTripsFreq
+    );
     this.setState({
       flopInformation: newFlopScenario,
     });
 
-    let newAnswerOptions = this.generateAnswerOptions(newFlopScenario.outCards.length);
+    let newAnswerOptions = this.generateAnswerOptions(
+      newFlopScenario.outCards.length
+    );
     this.setState({
-      answerOptions: newAnswerOptions
+      answerOptions: newAnswerOptions,
     });
   }
 
-  setAnswerOptions() {
-    
-  } 
-
   setAnswerCorrectness(newAnswerCorrectness) {
     this.setState({
-      answerCorrectness: newAnswerCorrectness
-    })
+      answerCorrectness: newAnswerCorrectness,
+    });
   }
 
   generateAnswerOptions = (correctAnswer) => {
@@ -71,28 +145,58 @@ class OutCounterWidgetContainer extends React.Component {
       20,
       21,
     ]);
-    possibleAnswerArr.splice(
-      possibleAnswerArr.indexOf(correctAnswer),
-      1
-    );
-    
+    possibleAnswerArr.splice(possibleAnswerArr.indexOf(correctAnswer), 1);
+
     answerArr.push(correctAnswer);
-    answerArr.push(possibleAnswerArr.splice(Math.floor(Math.random() * possibleAnswerArr.length), 1)[0]);
-    answerArr.push(possibleAnswerArr.splice(Math.floor(Math.random() * possibleAnswerArr.length), 1)[0]);
-    answerArr.push(possibleAnswerArr.splice(Math.floor(Math.random() * possibleAnswerArr.length), 1)[0]);
-    answerArr.push(possibleAnswerArr.splice(Math.floor(Math.random() * possibleAnswerArr.length), 1)[0]);
-    console.log(answerArr + "ANSWER ARR INSIDE METHOD")
-      //bundle this up with generateNewFlopScenario and pass it down why dont you
+    answerArr.push(
+      possibleAnswerArr.splice(
+        Math.floor(Math.random() * possibleAnswerArr.length),
+        1
+      )[0]
+    );
+    answerArr.push(
+      possibleAnswerArr.splice(
+        Math.floor(Math.random() * possibleAnswerArr.length),
+        1
+      )[0]
+    );
+    answerArr.push(
+      possibleAnswerArr.splice(
+        Math.floor(Math.random() * possibleAnswerArr.length),
+        1
+      )[0]
+    );
+    answerArr.push(
+      possibleAnswerArr.splice(
+        Math.floor(Math.random() * possibleAnswerArr.length),
+        1
+      )[0]
+    );
+    console.log(answerArr + "ANSWER ARR INSIDE METHOD");
+    //bundle this up with generateNewFlopScenario and pass it down why dont you
     //console.log(correctAnswer)
     //console.log(possibleAnswerArr)
     shuffle(answerArr);
     return answerArr;
   };
-  
 
   render() {
     return (
       <OutCounterWidget
+        insideStraightFreq={this.state.insideStraightFreq}
+        openStraightFreq={this.state.openStraightFreq}
+        flushDrawFreq={this.state.flushDrawFreq}
+        noHitsFreq={this.state.noHitsFreq}
+        tripsToFullhouseOrQuadsFreq={this.state.tripsToFullhouseOrQuadsFreq}
+        onePairToTwoPairFreq={this.state.onePairToTwoPairFreq}
+        twoPairToFullhouseFreq={this.state.twoPairToFullhouseFreq}
+        setInsideStraightFreq={this.setInsideStraightFreq}
+        setOpenStraightFreq={this.setOpenStraightFreq}
+        setFlushDrawFreq={this.setFlushDrawFreq}
+        setNoHitsFreq={this.setNoHitsFreq}
+        setTripsToFullhouseOrQuadsFreq={this.setTripsToFullhouseOrQuadsFreq}
+        setOnePairToTwoPairFreq={this.setOnePairToTwoPairFreq}
+        setTwoPairToFullhouseFreq={this.setTwoPairToFullhouseFreq}
         setNewFlopScenario={this.setNewFlopScenario}
         setAnswerCorrectness={this.setAnswerCorrectness}
         setAnswerOptions={this.setAnswerOptions}
