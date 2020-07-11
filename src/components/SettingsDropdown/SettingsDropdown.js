@@ -12,8 +12,8 @@ const SettingsDropdown = (props) => (
   <React.Fragment>
     <Container fluid className="mx-0 px-0 mt-1">
       <Row>
-        <Col xs={0} sm={2} md={3} lg={3} xl={3}></Col>
-        <Col xs={12} sm={8} md={6} lg={6} xl={6}>
+        {/* <Col xs={0} sm={2} md={3} lg={3} xl={3}></Col> */}
+        {/* <Col xs={12} sm={8} md={6} lg={6} xl={6}> */}
           <ButtonGroup size="sm" style={{ width: "100%" }}>
             <Button variant="primary" className="m-0 p-0">
               <p className="my-auto main-font-family x-small-font m-0 p-0">
@@ -288,8 +288,8 @@ const SettingsDropdown = (props) => (
               </Dropdown.Menu>
             </Dropdown>
           </ButtonGroup>
-        </Col>
-        <Col xs={0} sm={2} md={3} lg={3} xl={3}></Col>
+        {/* </Col> */}
+        {/* <Col xs={0} sm={2} md={3} lg={3} xl={3}></Col> */}
       </Row>
     </Container>
   </React.Fragment>

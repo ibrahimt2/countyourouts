@@ -72,8 +72,8 @@ class AnswerHolder extends React.Component {
             <Modal.Footer className="p-0 m-0"></Modal.Footer>
           </Modal>
           <Row>
-            <Col xs={0} sm={2} md={3} lg={4} xl={4} className=""></Col>
-            <Col xs={12} sm={8} md={6} lg={4} xl={4}>
+            {/* <Col xs={0} sm={2} md={3} lg={4} xl={4} className=""></Col> */}
+            {/* <Col xs={12} sm={8} md={6} lg={4} xl={4}> */}
               <Container fluid className="cardHolder pb-1">
                 <QuestionTooltip/>
                 <AnswerOptions
@@ -81,9 +81,9 @@ class AnswerHolder extends React.Component {
                   answerOptions={this.props.answerOptions}
                 />
               </Container>
-            </Col>
+            {/* </Col> */}
 
-            <Col xs={0} sm={2} md={3} lg={4} xl={4}></Col>
+            {/* <Col xs={0} sm={2} md={3} lg={4} xl={4}></Col> */}
           </Row>
         </Container>
       </React.Fragment>

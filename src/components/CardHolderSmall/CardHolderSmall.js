@@ -17,10 +17,10 @@ class CardHolderSmall extends React.Component {
                 <Container fluid className="mx-0 px-0 mt-1">
                     
                     <Row>
-                    <Col xs={0} sm={2} md={3} lg={3} xl={3} className=''>
+                    {/* <Col xs={0} sm={2} md={3} lg={3} xl={3} className=''> */}
                 
-                    </Col>
-                    <Col xs={12} sm={8} md={6} lg={6} xl={6}>
+                    {/* </Col> */}
+                    {/* <Col xs={12} sm={8} md={6} lg={6} xl={6}> */}
                     <Container fluid className="cardHolder pb-1">
                     <h6 className='text-center mb-0 main-font-family'>HOLE CARDS</h6>
                     <Row xs={2} sm={2} md={2} lg={2} xl={2} className=''>
@@ -29,11 +29,11 @@ class CardHolderSmall extends React.Component {
                        
                     </Row>
                     </Container>
-                    </Col>
+                    {/* </Col> */}
                       
-                    <Col xs={0} sm={2} md={3} lg={3} xl={3}>
+                    {/* <Col xs={0} sm={2} md={3} lg={3} xl={3}> */}
                     
-                    </Col>
+                    {/* </Col> */}
                     </Row>
                     
                     
