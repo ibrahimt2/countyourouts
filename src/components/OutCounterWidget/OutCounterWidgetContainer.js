@@ -64,7 +64,7 @@ class OutCounterWidgetContainer extends React.Component {
 
   setFlushDrawFreq(updateVal) {
     this.setState({
-      FlushDrawFreq: updateVal,
+      flushDrawFreq: updateVal,
     });
   }
 

@@ -5,8 +5,8 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Dropdown from "react-bootstrap/Dropdown";
 import Form from "react-bootstrap/Form";
-import Button from 'react-bootstrap/Button';
-import ButtonGroup from 'react-bootstrap/ButtonGroup';
+import Button from "react-bootstrap/Button";
+import ButtonGroup from "react-bootstrap/ButtonGroup";
 
 const SettingsDropdown = (props) => (
   <React.Fragment>
@@ -14,10 +14,22 @@ const SettingsDropdown = (props) => (
       <Row>
         <Col xs={0} sm={2} md={3} lg={3} xl={3}></Col>
         <Col xs={12} sm={8} md={6} lg={6} xl={6}>
-          <ButtonGroup size="sm" style={{"width": "100%"}}> 
-            <Button variant="primary" className="m-0 p-0"><p className="my-auto main-font-family x-small-font m-0 p-0">Normal</p></Button>
-            <Button className="m-0 p-0"><p className="my-auto main-font-family x-small-font m-0 p-0">Blitz</p></Button>
-            <Button className="m-0 p-0"><p className="my-auto main-font-family x-small-font m-0 p-0">Marathon</p></Button>
+          <ButtonGroup size="sm" style={{ width: "100%" }}>
+            <Button variant="primary" className="m-0 p-0">
+              <p className="my-auto main-font-family x-small-font m-0 p-0">
+                Normal
+              </p>
+            </Button>
+            <Button className="m-0 p-0">
+              <p className="my-auto main-font-family x-small-font m-0 p-0">
+                Blitz
+              </p>
+            </Button>
+            <Button className="m-0 p-0">
+              <p className="my-auto main-font-family x-small-font m-0 p-0">
+                Marathon
+              </p>
+            </Button>
             <Dropdown>
               <Dropdown.Toggle
                 variant="primary"
