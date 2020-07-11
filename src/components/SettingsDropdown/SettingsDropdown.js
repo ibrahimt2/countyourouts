@@ -34,7 +34,7 @@ const SettingsDropdown = (props) => (
               <Dropdown.Toggle
                 variant="primary"
                 id="dropdown-basic"
-                style={{ "font-size": "x-small" }}
+                style={{ "font-size": "xx-small" }}
               >
                 <img
                   src={require("../../assets//icons/gearicon.svg")}
@@ -45,10 +45,10 @@ const SettingsDropdown = (props) => (
                 />
               </Dropdown.Toggle>
               <Dropdown.Menu>
-                <Container>
+                <Container fluid>
                   <Row>
                     <Col xs={3} className="p-1 pl- m-0">
-                      <p className="my-auto" style={{ "font-size": "x-small" }}>
+                      <p className="my-auto settings-dropdown-font">
                         Draw
                       </p>
                     </Col>
@@ -57,7 +57,7 @@ const SettingsDropdown = (props) => (
                       xs={2}
                       className="p-1 m-0 float-right my-auto align-center"
                     >
-                      <p className="my-auto" style={{ "font-size": "x-small" }}>
+                      <p className="my-auto settings-dropdown-font">
                         Prob
                       </p>
                     </Col>
@@ -65,7 +65,7 @@ const SettingsDropdown = (props) => (
 
                   <Row>
                     <Col xs={4} className="p-1 pl-0 m-0">
-                      <p className="my-auto" style={{ "font-size": "x-small" }}>
+                      <p className="my-auto settings-dropdown-font">
                         Inside Straight
                       </p>
                     </Col>
@@ -87,9 +87,9 @@ const SettingsDropdown = (props) => (
                     </Col>
                     <Col
                       xs={2}
-                      className="p-1 m-0 float-right my-auto align-center"
+                      className="p-1 m-0 mr-1 float-right my-auto align-center"
                     >
-                      <p className="my-auto" style={{ "font-size": "x-small" }}>
+                      <p className="my-auto settings-dropdown-font">
                         {props.getInsideStraightProb().toFixed(1)}%
                       </p>
                     </Col>
@@ -97,7 +97,7 @@ const SettingsDropdown = (props) => (
 
                   <Row>
                     <Col xs={4} className="p-1 pl-0 m-0">
-                      <p className="my-auto" style={{ "font-size": "x-small" }}>
+                      <p className="my-auto settings-dropdown-font">
                         Open Straight
                       </p>
                     </Col>
@@ -119,9 +119,9 @@ const SettingsDropdown = (props) => (
                     </Col>
                     <Col
                       xs={2}
-                      className="p-1 m-0 float-right my-auto align-center"
+                      className="p-1 m-0 mr-1 float-right my-auto align-center"
                     >
-                      <p className="my-auto" style={{ "font-size": "x-small" }}>
+                      <p className="my-auto settings-dropdown-font">
                         {props.getOpenStraightProb().toFixed(1)}%
                       </p>
                     </Col>
@@ -129,7 +129,7 @@ const SettingsDropdown = (props) => (
 
                   <Row>
                     <Col xs={4} className="p-1 pl-0 m-0">
-                      <p className="my-auto" style={{ "font-size": "x-small" }}>
+                      <p className="my-auto settings-dropdown-font">
                         Flush
                       </p>
                     </Col>
@@ -151,9 +151,9 @@ const SettingsDropdown = (props) => (
                     </Col>
                     <Col
                       xs={2}
-                      className="p-1 m-0 float-right my-auto align-center"
+                      className="p-1 m-0 mr-1 float-right my-auto align-center"
                     >
-                      <p className="my-auto" style={{ "font-size": "x-small" }}>
+                      <p className="my-auto settings-dropdown-font">
                         {props.getFlushDrawProb().toFixed(1)}%
                       </p>
                     </Col>
@@ -161,7 +161,7 @@ const SettingsDropdown = (props) => (
 
                   <Row>
                     <Col xs={4} className="p-1 pl-0 m-0">
-                      <p className="my-auto" style={{ "font-size": "x-small" }}>
+                      <p className="my-auto settings-dropdown-font">
                         1P to 2P
                       </p>
                     </Col>
@@ -183,9 +183,9 @@ const SettingsDropdown = (props) => (
                     </Col>
                     <Col
                       xs={2}
-                      className="p-1 m-0 float-right my-auto align-center"
+                      className="p-1 m-0 mr-1 float-right my-auto align-center"
                     >
-                      <p className="my-auto" style={{ "font-size": "x-small" }}>
+                      <p className="my-auto settings-dropdown-font">
                         {props.getOnePairToTwoPairProb().toFixed(1)}%
                       </p>
                     </Col>
@@ -193,7 +193,7 @@ const SettingsDropdown = (props) => (
 
                   <Row>
                     <Col xs={4} className="p-1 pl-0 m-0">
-                      <p className="my-auto" style={{ "font-size": "x-small" }}>
+                      <p className="my-auto settings-dropdown-font">
                         2P to Trips
                       </p>
                     </Col>
@@ -215,9 +215,9 @@ const SettingsDropdown = (props) => (
                     </Col>
                     <Col
                       xs={2}
-                      className="p-1 m-0 float-right my-auto align-center"
+                      className="p-1 m-0 mr-1 float-right my-auto align-center"
                     >
-                      <p className="my-auto" style={{ "font-size": "x-small" }}>
+                      <p className="my-auto settings-dropdown-font">
                         {props.getTwoPairToFullhouseProb().toFixed(1)}%
                       </p>
                     </Col>
@@ -225,7 +225,7 @@ const SettingsDropdown = (props) => (
 
                   <Row>
                     <Col xs={4} className="p-1 pl-0 m-0">
-                      <p className="my-auto" style={{ "font-size": "x-small" }}>
+                      <p className="my-auto settings-dropdown-font">
                         Trips To Full
                       </p>
                     </Col>
@@ -247,9 +247,9 @@ const SettingsDropdown = (props) => (
                     </Col>
                     <Col
                       xs={2}
-                      className="p-1 m-0 float-right my-auto align-center"
+                      className="p-1 m-0 mr-1 float-right my-auto align-center"
                     >
-                      <p className="my-auto" style={{ "font-size": "x-small" }}>
+                      <p className="my-auto settings-dropdown-font">
                         {props.getTripsToFullhouseOrQuadsProb().toFixed(1)}%
                       </p>
                     </Col>
@@ -257,7 +257,7 @@ const SettingsDropdown = (props) => (
 
                   <Row>
                     <Col xs={4} className="p-1 pl-0 m-0">
-                      <p className="my-auto" style={{ "font-size": "x-small" }}>
+                      <p className="my-auto settings-dropdown-font">
                         No Hits
                       </p>
                     </Col>
@@ -277,9 +277,9 @@ const SettingsDropdown = (props) => (
                     </Col>
                     <Col
                       xs={2}
-                      className="p-1 m-0 float-right my-auto align-center"
+                      className="p-1 m-0 mr-1 float-right my-auto align-center"
                     >
-                      <p className="my-auto" style={{ "font-size": "x-small" }}>
+                      <p className="my-auto settings-dropdown-font">
                         {props.getNoHitsProb().toFixed(1)}%
                       </p>
                     </Col>
