@@ -18,7 +18,7 @@ class CardHolderSmall extends React.Component {
             {/* </Col> */}
             {/* <Col xs={12} sm={8} md={6} lg={6} xl={6}> */}
             <Container fluid className="cardHolder pb-1">
-              <h3 className="text-center mb-0 main-font-family">HOLE CARDS</h3>
+              <h4 className="text-center mb-0 main-font-family">HOLE CARDS</h4>
               <Row xs={2} sm={2} md={2} lg={2} xl={2} className="">
                 <Col className="px-1">
                   <img

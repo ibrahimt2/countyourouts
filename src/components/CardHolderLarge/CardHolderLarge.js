@@ -22,7 +22,7 @@ class CardHolderLarge extends React.Component {
             {/* </Col> */}
             {/* <Col xs={12} sm={8} md={6} lg={6} xl={6}> */}
             <Container fluid className="cardHolder pb-1">
-              <h3 className="text-center mb-0 main-font-family">FLOP</h3>
+              <h4 className="text-center mb-0 main-font-family">FLOP</h4>
               <Row
                 xs={5}
                 sm={5}

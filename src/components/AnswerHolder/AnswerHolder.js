@@ -21,7 +21,7 @@ class AnswerHolder extends React.Component {
         style={{
           width: "100%",
           height: "auto",
-          "max-width": "50px",
+          "max-width": "4rem",
         }}
       />
     ));
@@ -42,12 +42,12 @@ class AnswerHolder extends React.Component {
                   )}
                 </Row>
                 <Row className="justify-content-center mt-3">
-                  <h6 className="text-center main-font-family">{this.props.drawName}</h6>
+                  <h4 className="text-center main-font-family">{this.props.drawName}</h4>
                 </Row>
                 <Row className="justify-content-center">
-                  <h6 className="text-center align-middle main-font-family">
+                  <h4 className="text-center align-middle main-font-family">
                     {this.props.outCards.length} OUTS
-                  </h6>
+                  </h4>
                 </Row>
                 <Row className="justify-content-center">
                   <div id="outsWrapper">
@@ -57,7 +57,6 @@ class AnswerHolder extends React.Component {
                 <Row className="float-right">
                   <Button
                     variant="primary"
-                    size="sm"
                     onClick={() => {
                       this.props.handleClose();
                       this.props.setNewFlopScenario();

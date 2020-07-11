@@ -22,7 +22,7 @@ const AnswerOptions = (props) => (
           }}
           value={props.answerOptions[0]}
         >
-          <h3 className='my-auto'>{props.answerOptions[0]}</h3>
+          <h4 className='my-auto'>{props.answerOptions[0]}</h4>
         </Button>{" "}
       </Col>
       <Col className="px-1 main-font-family">
@@ -34,7 +34,7 @@ const AnswerOptions = (props) => (
           }}
           value={props.answerOptions[1]}
         >
-          <h3 className='my-auto'>{props.answerOptions[1]}</h3>
+          <h4 className='my-auto'>{props.answerOptions[1]}</h4>
         </Button>{" "}
       </Col>
       <Col className="px-1 main-font-family">
@@ -46,7 +46,7 @@ const AnswerOptions = (props) => (
           }}
           value={props.answerOptions[2]}
         >
-          <h3 className='my-auto'>{props.answerOptions[2]}</h3>
+          <h4 className='my-auto'>{props.answerOptions[2]}</h4>
         </Button>{" "}
       </Col>
       <Col className="px-1 main-font-family">
@@ -58,7 +58,7 @@ const AnswerOptions = (props) => (
           }}
           value={props.answerOptions[3]}
         >
-          <h3 className='my-auto'>{props.answerOptions[3]}</h3>
+          <h4 className='my-auto'>{props.answerOptions[3]}</h4>
         </Button>{" "}
       </Col>
       <Col className="px-1 main-font-family">
@@ -70,7 +70,7 @@ const AnswerOptions = (props) => (
           }}
           value={props.answerOptions[4]}
         >
-          <h3 className='my-auto'>{props.answerOptions[4]}</h3>
+          <h4 className='my-auto'>{props.answerOptions[4]}</h4>
         </Button>{" "}
       </Col>
     </Row>
