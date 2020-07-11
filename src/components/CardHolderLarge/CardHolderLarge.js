@@ -22,7 +22,7 @@ class CardHolderLarge extends React.Component {
             {/* </Col> */}
             {/* <Col xs={12} sm={8} md={6} lg={6} xl={6}> */}
             <Container fluid className="cardHolder pb-1">
-              <h6 className="text-center mb-0 main-font-family">FLOP</h6>
+              <h3 className="text-center mb-0 main-font-family">FLOP</h3>
               <Row
                 xs={5}
                 sm={5}
@@ -38,7 +38,7 @@ class CardHolderLarge extends React.Component {
                     style={{
                       width: "100%",
                       height: "auto",
-                      "max-width": "75px",
+                      "max-width": "10rem",
                     }}
                   />
                 </Col>
@@ -49,7 +49,7 @@ class CardHolderLarge extends React.Component {
                     style={{
                       width: "100%",
                       height: "auto",
-                      "max-width": "75px",
+                      "max-width": "10rem",
                     }}
                   />
                 </Col>
@@ -60,7 +60,7 @@ class CardHolderLarge extends React.Component {
                     style={{
                       width: "100%",
                       height: "auto",
-                      "max-width": "75px",
+                      "max-width": "10rem",
                     }}
                   />
                 </Col>
@@ -71,7 +71,7 @@ class CardHolderLarge extends React.Component {
                     style={{
                       width: "100%",
                       height: "auto",
-                      "max-width": "75px",
+                      "max-width": "10rem",
                     }}
                   />
                 </Col>
@@ -82,7 +82,7 @@ class CardHolderLarge extends React.Component {
                     style={{
                       width: "100%",
                       height: "auto",
-                      "max-width": "75px",
+                      "max-width": "10rem",
                     }}
                   />
                 </Col>

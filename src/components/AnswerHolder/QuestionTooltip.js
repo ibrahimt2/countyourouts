@@ -17,7 +17,7 @@ function renderTooltip(props) {
       delay={{ show: 250, hide: 400 }}
       overlay={renderTooltip}
     >
-    <h6 className="text-center mb-1 main-font-family">How many outs do you have?</h6>
+    <h3 className="text-center mb-1 main-font-family">How many outs do you have?</h3>
     {/* <Button variant="secondary" style={{'border-radius':'40%'}}>?</Button> */}
     </OverlayTrigger>
   );

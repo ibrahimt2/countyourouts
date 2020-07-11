@@ -23,7 +23,7 @@ class NavigationBar extends React.Component {
             <Nav className="mr-auto">
               <Nav.Link href="#home" className="m-0 py-1 ">
                 <Link
-                  className="main-font-family m-0 py-0 nav-link font-x-small text-decoration-none"
+                  className="main-font-family m-0 py-0 nav-link text-decoration-none"
                   to="/"
                 >
                   Home
@@ -31,7 +31,7 @@ class NavigationBar extends React.Component {
               </Nav.Link>
               <Nav.Link href="#home" className="m-0 py-1">
                 <Link
-                  className="main-font-family m-0 py-0 nav-link font-x-small text-decoration-none"
+                  className="main-font-family m-0 py-0 nav-link text-decoration-none"
                   to="/"
                 >
                   About
@@ -39,7 +39,7 @@ class NavigationBar extends React.Component {
               </Nav.Link>
               <Nav.Link href="#home" className="m-0 py-1">
                 <Link
-                  className="main-font-family m-0 py-0 nav-link font-x-small text-decoration-none"
+                  className="main-font-family m-0 py-0 nav-link text-decoration-none"
                   to="/"
                 >
                   Contact
