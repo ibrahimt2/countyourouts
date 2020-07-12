@@ -13,10 +13,10 @@ function App() {
   return (
     <React.Fragment>
       <Router>
-        <NavigationBar />
-        <Container fluid className="m-0 p-0">
+        <NavigationBar/>
+        <Container fluid={true}>
         <Row>
-          <Col xs={0} sm={2} md={3} lg={3} xl={3}></Col>
+            <Col xs={0} sm={2} md={3} lg={3} xl={3}></Col>
           <Col className="m-1">
             <Container fluid>
               <OutCounterWidgetContainer />
