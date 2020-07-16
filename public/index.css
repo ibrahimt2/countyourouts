@@ -10,4 +10,18 @@
 .settings-dropdown-font {
   font-size: xx-small;
 }
+
+.main-accent-nav {
+  background-image: linear-gradient(to right, #CD1A1A , #FAFF0E);
+  min-height: 0.25rem;
+
+}
+
+.nav-link-color {
+  color: grey;
+}
+
+.nav-link-color:hover {
+ color: black;
+}
   

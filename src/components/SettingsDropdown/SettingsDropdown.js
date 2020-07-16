@@ -22,12 +22,12 @@ const SettingsDropdown = (props) => (
             </Button>
             <Button className="m-0 p-0">
               <p className="my-auto main-font-family x-small-font m-0 p-0">
-                Blitz
+                In Development
               </p>
             </Button>
             <Button className="m-0 p-0">
               <p className="my-auto main-font-family x-small-font m-0 p-0">
-                Marathon
+               In Development
               </p>
             </Button>
             <Dropdown>
