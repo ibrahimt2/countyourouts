@@ -24,15 +24,15 @@ class NavigationBar extends React.Component {
               <Nav.Link href="#home" className="m-0 py-1 ">
                 <Link
                   className="main-font-family m-0 py-0 nav-link text-decoration-none"
-                  to="/"
+                  to=""
                 >
-                  Home
+                  Practice
                 </Link>
               </Nav.Link>
               <Nav.Link href="#home" className="m-0 py-1">
                 <Link
                   className="main-font-family m-0 py-0 nav-link text-decoration-none"
-                  to="/"
+                  to="../../../public/wiki-pages/what-are-outs.html"
                 >
                   About
                 </Link>
