@@ -21,26 +21,26 @@ class NavigationBar extends React.Component {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
-              <Nav.Link href="#home" className="m-0 py-1 ">
-                <Link
-                  className="main-font-family m-0 py-0 nav-link text-decoration-none"
-                  to=""
-                >
-                  Practice
-                </Link>
-              </Nav.Link>
-              <Nav.Link href="#home" className="m-0 py-1">
+              <Nav.Link href="../../../public/wiki-pages/what-are-outs.html" className="m-0 py-1 ">
                 <Link
                   className="main-font-family m-0 py-0 nav-link text-decoration-none"
                   to="../../../public/wiki-pages/what-are-outs.html"
                 >
-                  About
+                  Practice
                 </Link>
               </Nav.Link>
-              <Nav.Link href="#home" className="m-0 py-1">
+              <Nav.Link href="../../../public/wiki-pages/what-are-outs.html" className="m-0 py-1">
                 <Link
                   className="main-font-family m-0 py-0 nav-link text-decoration-none"
-                  to="/"
+                  to="../../../public/wiki-pages/what-are-outs.html"
+                >
+                  What Are Outs?
+                </Link>
+              </Nav.Link>
+              <Nav.Link href="../../../public/wiki-pages/what-are-outs.html" className="m-0 py-1">
+                <Link
+                  className="main-font-family m-0 py-0 nav-link text-decoration-none"
+                  to="../../../public/wiki-pages/what-are-outs.html"
                 >
                   Contact
                 </Link>
