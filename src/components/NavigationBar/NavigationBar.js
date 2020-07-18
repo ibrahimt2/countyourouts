@@ -21,29 +21,31 @@ class NavigationBar extends React.Component {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
-              <Nav.Link href="#home" className="m-0 py-1 ">
+              <Nav.Link href="/" className="mx-2 py-1 main-font-family nav-link text-decoration-none">
+                Practice
                 <Link
                   className="main-font-family m-0 py-0 nav-link text-decoration-none"
                   to="/"
                 >
-                  Home
                 </Link>
               </Nav.Link>
-              <Nav.Link href="#home" className="m-0 py-1">
+              <Nav.Link href="/what-are-outs" className="mx-2 py-1 main-font-family nav-link text-decoration-none">
+                What Are Outs?
                 <Link
                   className="main-font-family m-0 py-0 nav-link text-decoration-none"
-                  to="/"
+                  to="/what-are-outs"
                 >
-                  About
+                  
                 </Link>
               </Nav.Link>
-              <Nav.Link href="#home" className="m-0 py-1">
-                <Link
+              <Nav.Link href="#home" className="mx-2 py-1 main-font-family nav-link text-decoration-none">
+                Contact
+                {/* <Link
                   className="main-font-family m-0 py-0 nav-link text-decoration-none"
                   to="/"
                 >
                   Contact
-                </Link>
+                </Link> */}
               </Nav.Link>
             </Nav>
           </Navbar.Collapse>
