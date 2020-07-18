@@ -61,7 +61,7 @@ const d5 = require('../assets/cards/DIAMOND-5.svg')
 const d4 = require('../assets/cards/DIAMOND-4.svg')
 const d3 = require('../assets/cards/DIAMOND-3.svg')
 const d2 = require('../assets/cards/DIAMOND-2.svg')
-const redBack = require('../assets/cards/RED-BACK.svg')
+const redBack = require('../assets/cards/Red_Back.svg')
 
 
 const putCardStringGetImage = {

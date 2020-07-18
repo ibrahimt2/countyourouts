@@ -21,26 +21,26 @@ class NavigationBar extends React.Component {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
-              <Nav.Link href="../../../public/wiki-pages/what-are-outs.html" className="m-0 py-1 ">
+              <Nav.Link href="#home" className="m-0 py-1 ">
                 <Link
                   className="main-font-family m-0 py-0 nav-link text-decoration-none"
-                  to="../../../public/wiki-pages/what-are-outs.html"
+                  to="/"
                 >
-                  Practice
+                  Home
                 </Link>
               </Nav.Link>
-              <Nav.Link href="../../../public/wiki-pages/what-are-outs.html" className="m-0 py-1">
+              <Nav.Link href="#home" className="m-0 py-1">
                 <Link
                   className="main-font-family m-0 py-0 nav-link text-decoration-none"
-                  to="../../../public/wiki-pages/what-are-outs.html"
+                  to="/"
                 >
-                  What Are Outs?
+                  About
                 </Link>
               </Nav.Link>
-              <Nav.Link href="../../../public/wiki-pages/what-are-outs.html" className="m-0 py-1">
+              <Nav.Link href="#home" className="m-0 py-1">
                 <Link
                   className="main-font-family m-0 py-0 nav-link text-decoration-none"
-                  to="../../../public/wiki-pages/what-are-outs.html"
+                  to="/"
                 >
                   Contact
                 </Link>
@@ -55,5 +55,3 @@ class NavigationBar extends React.Component {
 }
 
 export default NavigationBar;
-
-//;pp

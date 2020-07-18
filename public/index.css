@@ -28,14 +28,3 @@
  color: black;
 }
   
-.large-card-img {
-  width: "100%";
-  height: "auto";
-  max-width: "10rem";
-}
-
-.hole-card-img {
-  width: "100%";
-  height: "auto";
-  max-width: 6rem;
-}
