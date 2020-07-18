@@ -5,10 +5,10 @@ class WhatAreOuts extends React.Component {
   render() {
     return (
       <React.Fragment>
-         <div class="col">
-                    <h1 class="text-center main-font-family">
+         <div class="col p-0 m-0">
+                    <h2 class="text-center main-font-family pt-4">
                         What are outs?
-                    </h1>
+                    </h2>
                     <p>First things first. If you don't know how to play poker, this website is going to
                         be pretty much useless. If you're here and don't know anything about poker, I probably personally sent this to you, or you saw this website on some CV. In that case,
                         welcome, and I suggest you <a href="https://www.pokerlistings.com/how-to-play-poker">learn how
@@ -60,7 +60,7 @@ class WhatAreOuts extends React.Component {
                         </div>
                     </div>
 
-                    <p>Wow, that sucks. <br/><br/>No flush, no straight, not even a pair. Not yet anyways. <br/><br/>
+                    <p><br/>Wow, that sucks. <br/><br/>No flush, no straight, not even a pair. Not yet anyways. <br/><br/>
                         Obviously, there are 2
                         more cards
                         left to see, and they might give you a better hand than you currently have. You might get a 10,
