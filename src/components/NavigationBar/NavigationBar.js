@@ -38,15 +38,15 @@ class NavigationBar extends React.Component {
                   
                 </Link>
               </Nav.Link>
-              <Nav.Link href="#home" className="mx-2 py-1 main-font-family nav-link text-decoration-none">
-                Contact
+              {/* <Nav.Link href="#home" className="mx-2 py-1 main-font-family nav-link text-decoration-none">
+                Contact */}
                 {/* <Link
                   className="main-font-family m-0 py-0 nav-link text-decoration-none"
                   to="/"
                 >
                   Contact
                 </Link> */}
-              </Nav.Link>
+              {/* </Nav.Link> */}
             </Nav>
           </Navbar.Collapse>
         </Navbar>
