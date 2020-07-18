@@ -67,9 +67,7 @@ class WhatAreOuts extends React.Component {
                         left to see, and they might give you a better hand than you currently have. You might get a 10,
                         giving you a 10 pair. Or a Jack, giving you a straight. <br/><br/>But how likely is this?
 
-                        You can measure the likelihood of your hand improving by counting the number of cards not yet
-                        seen that
-                        are still left in the deck, that might improve your hand to one you might win with. These cards
+                        You can measure the likelihood of your hand improving by counting the number of cards still left in the deck that might improve your hand to a winning hand. These cards
                         are called <strong>outs</strong>.
                     </p>
 
