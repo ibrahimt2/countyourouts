@@ -10,8 +10,7 @@ class WhatAreOuts extends React.Component {
                         What are outs?
                     </h1>
                     <p>First things first. If you don't know how to play poker, this website is going to
-                        be pretty much useless. If you're here and don't know anything about poker, you're either a
-                        friend or family that I've sent this to, or you saw this website on some CV. In that case,
+                        be pretty much useless. If you're here and don't know anything about poker, I probably personally sent this to you, or you saw this website on some CV. In that case,
                         welcome, and I suggest you <a href="https://www.pokerlistings.com/how-to-play-poker">learn how
                             to play poker</a> before continuing. It's a fun game to play with friends, even if you don't
                         gamble!
@@ -68,7 +67,9 @@ class WhatAreOuts extends React.Component {
                         giving you a 10 pair. Or a Jack, giving you a straight. <br/><br/>But how likely is this?
 
                         You can measure the likelihood of your hand improving by counting the number of cards still left in the deck that might improve your hand to a winning hand. These cards
-                        are called <strong>outs</strong>.
+                        are called <strong>outs</strong>. <br/><br/>
+
+                        If you didn't quite get that, read it again. The concept of what an out is is vital to using this tool.
                     </p>
 
                     <h4 class="main-font-family">
@@ -76,21 +77,21 @@ class WhatAreOuts extends React.Component {
                     </h4>
 
                     <p>Counting outs is both an art and a science. For example, I might ask you:
-                        How many cards left in the deck would improve your hand
-                        to a straight? After looking at the cards and realising that only another Jack is needed to
+                        how many cards left in the deck would improve your hand
+                        to a straight? After looking at the cards and realising that only another jack is needed to
                         complete a straight, you might say 'There are 4 jacks we haven't seen left in the deck, so 4
-                        outs?
+                        outs?'
 
                         <br/><br/>That can be both right and wrong. If none of the other players have a Jack, you would be
-                        right. If the 4 Jacks are all with other players, you would be completely wrong. You can never
-                        know for sure what your opponents have, and therefore never consider the cards in your
-                        mathematical calculations.
+                        right. If the 4 jacks are all with other players, you would be completely wrong. You can never
+                        know for sure what your opponents have, and therefore never consider the cards your opponents might have in your
+                        poker calculations. So in this case, if you want a straight, you have 4 outs.
 
                         <br/><br/>Counting outs also depends on what cards you think your opponent has. If your opponent
                         is not
-                        betting too much, you might think to yourself 'Huh, this guy probably doesn't have anything' and
+                        betting too much, you might think to yourself 'Huh, this guy probably doesn't have a good hand' and
                         be confident that you could beat him with just a pair, in which case any 10 or 9 would be
-                        considered outs. If you're playing more cautiously, you might only be confident of success when
+                        considered outs. <br/><br/>If you're playing more cautiously, you might only be confident of success when
                         you have a straight, in which case your outs are only the 4 Jacks left in the deck.<br/><br/>
 
                     <h4 class="main-font-family">
@@ -106,7 +107,7 @@ class WhatAreOuts extends React.Component {
                         explained much more in depth </a>
 
                     <br/><br/>I hope you have fun using this tool I've created. It allows you to practice counting outs in
-                    a wide variety of situations and hopefully improve your poker game. If you want to get in touch to
+                    a wide variety of situations and hopefully improves your poker game. I'm not a professional poker player, so if you notice any errors feel free to report them to me.<br/><br/> If you want to get in touch to
                     report a bug, offer advice on improving the tool or send a joke or job, do so at <a
                         href="ibrahim.miraj@mail.mcgill.ca">my email</a>
 
