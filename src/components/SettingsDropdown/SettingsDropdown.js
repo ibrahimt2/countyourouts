@@ -17,10 +17,10 @@ const SettingsDropdown = (props) => (
           <ButtonGroup size="sm" style={{ width: "100%" }}>
             <Button variant="primary" className="m-0 p-0">
               <p className="my-auto main-font-family x-small-font m-0 p-0">
-                Normal
+                Standard Edition
               </p>
             </Button>
-            <Button className="m-0 p-0">
+            {/* <Button className="m-0 p-0">
               <p className="my-auto main-font-family x-small-font m-0 p-0">
                 In Development
               </p>
@@ -29,7 +29,7 @@ const SettingsDropdown = (props) => (
               <p className="my-auto main-font-family x-small-font m-0 p-0">
                In Development
               </p>
-            </Button>
+            </Button> */}
             <Dropdown>
               <Dropdown.Toggle
                 variant="primary"

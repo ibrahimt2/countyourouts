@@ -1,10 +1,10 @@
 .main-font-family {
-    font-family: 'Fredoka One', cursive;
-  }
+  font-family: "Fredoka One", cursive;
+}
 
-  .body-font-family {
-    font-family: 'Source Sans Pro', sans-serif;
-  }
+.body-font-family {
+  font-family: "Source Sans Pro", sans-serif;
+}
 
 .small-font {
   font-size: small;
@@ -15,9 +15,8 @@
 }
 
 .main-accent-nav {
-  background-image: linear-gradient(to right, #CD1A1A , #FAFF0E);
+  background-image: linear-gradient(to right, #cd1a1a, #faff0e);
   min-height: 0.25rem;
-
 }
 
 .nav-link-color {
@@ -25,6 +24,17 @@
 }
 
 .nav-link-color:hover {
- color: black;
+  color: black;
 }
-  
+
+.large-card-img {
+  width: 100%;
+  height: auto;
+  max-width: 10rem;
+}
+
+.hole-card-img {
+  width: 100%;
+  height: auto;
+  max-width: 6rem;
+}
