@@ -22,24 +22,14 @@ class CardHolderSmall extends React.Component {
               <Row xs={2} sm={2} md={2} lg={2} xl={2} className="">
                 <Col className="px-1">
                   <img
-                    className="card border border-dark float-right"
+                    className="card border border-dark float-right hole-card-img"
                     src={putCardStringGetImage[this.props.holeCards[0]]}
-                    style={{
-                      width: "100%",
-                      height: "auto",
-                      "max-width": "6rem",
-                    }}
                   />
                 </Col>
                 <Col className="px-1">
                   <img
-                    className="card border border-dark float-left"
+                    className="card border border-dark float-left hole-card-img"
                     src={putCardStringGetImage[this.props.holeCards[1]]}
-                    style={{
-                      width: "100%",
-                      height: "auto",
-                      "max-width": "6rem",
-                    }}
                   />
                 </Col>
               </Row>

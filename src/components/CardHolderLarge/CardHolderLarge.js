@@ -33,57 +33,32 @@ class CardHolderLarge extends React.Component {
               >
                 <Col className="px-1 d-flex justify-content-center">
                   <img
-                    className="card border border-dark"
+                    className="card border border-dark large-card-img"
                     src={putCardStringGetImage[this.props.flopCards[0]]}
-                    style={{
-                      width: "100%",
-                      height: "auto",
-                      "max-width": "10rem",
-                    }}
                   />
                 </Col>
                 <Col className="px-1 d-flex justify-content-center">
                   <img
-                    className="card border border-dark"
+                    className="card border border-dark large-card-img"
                     src={putCardStringGetImage[this.props.flopCards[1]]}
-                    style={{
-                      width: "100%",
-                      height: "auto",
-                      "max-width": "10rem",
-                    }}
                   />
                 </Col>
                 <Col className="px-1 d-flex justify-content-center">
                   <img
-                    className="card border border-dark"
+                    className="card border border-dark large-card-img"
                     src={putCardStringGetImage[this.props.flopCards[2]]}
-                    style={{
-                      width: "100%",
-                      height: "auto",
-                      "max-width": "10rem",
-                    }}
                   />
                 </Col>
                 <Col className="px-1 d-flex justify-content-center">
                   <img
-                    className="card border border-dark"
+                    className="card border border-dark large-card-img"
                     src={putCardStringGetImage[this.props.flopCards[3]]}
-                    style={{
-                      width: "100%",
-                      height: "auto",
-                      "max-width": "10rem",
-                    }}
                   />
                 </Col>
                 <Col className="px-1 d-flex justify-content-center">
                   <img
-                    className="card border border-dark"
+                    className="card border border-dark large-card-img"
                     src={putCardStringGetImage[this.props.flopCards[4]]}
-                    style={{
-                      width: "100%",
-                      height: "auto",
-                      "max-width": "10rem",
-                    }}
                   />
                 </Col>
               </Row>
