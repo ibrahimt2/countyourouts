@@ -5,7 +5,9 @@ A web application aimed at helping intermediate poker players learn how to calcu
 Utilizes my Poker Draw Generator project to provide novel functionality.
 
 Languages: HTML | CSS | Javascript
+
 Frameworks: Bootstrap | React | NodeJS
+
 Testing: Mocha
 
 _____________
