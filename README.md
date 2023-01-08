@@ -9,6 +9,7 @@ Frameworks: Bootstrap | React | NodeJS
 Testing: Mocha
 
 Live at: [countyourouts.netlify.com](https://countyourouts.netlify.app/)
+
 About/Explanation Of Tool: [About](https://countyourouts.netlify.app/what-are-outs)
 
 
