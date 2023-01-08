@@ -1,3 +1,5 @@
+# Count Your Outs - Learn Poker Mathematics
+
 A web application aimed at helping intermediate poker players learn how to calculate the odds of getting an advantage on the next card.
 
 Utilizes my Poker Draw Generator project to provide novel functionality.
@@ -7,3 +9,4 @@ Frameworks: Bootstrap | React | NodeJS
 Testing: Mocha
 
 Live at [countyourouts.netlify.com](https://countyourouts.netlify.app/)
+
