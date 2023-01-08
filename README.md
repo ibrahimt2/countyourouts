@@ -8,5 +8,5 @@ Languages: HTML | CSS | Javascript
 Frameworks: Bootstrap | React | NodeJS
 Testing: Mocha
 
-Live at [countyourouts.netlify.com](https://countyourouts.netlify.app/)
+Live at: [countyourouts.netlify.com](https://countyourouts.netlify.app/)
 
